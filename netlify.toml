@@ -1,0 +1,11 @@
+# netlify.toml
+[build]
+  command = "npm run build"
+  publish = "public"  # Where the built static files live
+  functions = "build/server"  # Points to the server build
+
+# Redirect all requests to Remix server
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
